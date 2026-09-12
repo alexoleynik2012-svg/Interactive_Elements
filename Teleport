@@ -1,0 +1,16 @@
+using UnityEngine;
+
+public class Teleport : MonoBehaviour
+{
+    public Transform teleportPoint;
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {   
+            
+            // Перемещаем игрока в указанную точку телепортации
+            other.transform.position = teleportPoint.position;
+        }
+    }
+}
